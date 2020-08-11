@@ -1,0 +1,15 @@
+<%- include("../partials/header.ejs") %>
+
+<p>Username: <%=user.username %></p>
+<!-- <p><a href="/password">Change Password</a></p> -->
+
+Your Posts:
+<ul>
+    <% campgrounds.forEach(function(camps){ %>
+    <li>
+        <a href="/campgrounds/<%=camps.id%>"><%= camps.name %></a>
+    </li>
+    <% }); %>
+</ul>
+
+<%- include("../partials/footer.ejs") %>

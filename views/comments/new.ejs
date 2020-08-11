@@ -1,0 +1,23 @@
+<%- include("../partials/header.ejs") %>
+
+<div class="container">
+    <div class="row">
+        <div class="my-2" style="width: 30%; margin: 0 auto;">
+            <h1 style="font-size: 20px;">Add New Comment to <%= campground.name %> </h1>
+            <form action = "/campgrounds/<%= campground._id %>/comments %>" method="POST">
+                <div class="form-group">
+                    <input class="form-control mt-3" type="text" name = "comment[text]" placeholder="text">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-md btn-info btn-block">SUBMIT</button>
+                </div>
+            </form>
+
+            <a href="/campgrounds">Go back</a>
+        </div>
+    </div>
+</div>
+
+
+
+<%- include("../partials/footer.ejs") %>
